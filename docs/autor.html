@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Análisis malla vial de San cristobal</title>
+  <title>Autor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -31,13 +31,20 @@
       </div>
       <div class="texto">
         <p>
-        Mi nombre es <strong>Laura Ramírez</strong>, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> en la <strong>Universidad Distrital Francisco José de Caldas</strong>. Actualmente curso el <strong>tercer semestre</strong> de la carrera.
+        Mi nombre es <strong>Laura Ramírez</strong>, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> 
+        en la <strong>Universidad Distrital Francisco José de Caldas</strong>. Actualmente curso el <strong>tercer 
+        semestre</strong> de la carrera.
       </p>
       <p>
-        Este proyecto nace a partir de una observación cotidiana: el mal estado de las vías en el barrio San Cristóbal. Aunque no nací ni vivo permanentemente allí, paso temporadas en esta zona, lo que me ha permitido identificar problemáticas que afectan a sus habitantes. 
+        Este proyecto nace a partir de una observación cotidiana: el mal estado de las vías en el barrio San Cristóbal. 
+        Aunque no nací ni vivo permanentemente allí, paso temporadas en esta zona, lo que me ha permitido identificar 
+        problemáticas que afectan a sus habitantes. 
       </p>
       <p>
-        Elegí este sector porque, aunque mi lugar de nacimiento y el lugar donde vive mi familia es <strong>Facatativá</strong>, he estado viviendo temporalmente en San Cristóbal y he podido observar de cerca el deterioro de su malla vial. A través de este trabajo, intento iniciar un análisis básico que pueda servir como punto de partida para futuras soluciones o investigaciones.
+        Elegí este sector porque, aunque mi lugar de nacimiento y el lugar donde vive mi familia es <strong>
+          Facatativá</strong>, he estado viviendo temporalmente en San Cristóbal y he podido observar de cerca 
+          el deterioro de su malla vial. A través de este trabajo, intento iniciar un análisis básico que pueda 
+          servir como punto de partida para futuras soluciones o investigaciones.
       </p>
       </div>
     </div>
@@ -47,10 +54,10 @@
   </main>
 
   <script>
-  var map = L.map('map').setView([4.809727062227319, -74.35091299664701], 15);
+  var map = L.map('map').setView([4.809603032342935, -74.35131030281265], 20);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-  L.marker([4.809727062227319, -74.35091299664701]).addTo(map)
-    .bindPopup("Aquí nací")
+  L.marker([4.809603032342935, -74.35131030281265]).addTo(map)
+    .bindPopup("Hospital de nacimiento")
     .openPopup();
 </script>
 

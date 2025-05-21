@@ -13,15 +13,6 @@ var puntosPoligono = [
     [4.560731, -74.085905]   // Coordenada 5 (debe ser igual a la primera para cerrar el polígono)
 ];
 
-// Crear el polígono y añadirlo al mapa
-var poligono = L.polygon(puntosPoligono, {
-    color: 'blue',        // Color del borde
-    fillColor: 'lightblue', // Color de relleno
-    fillOpacity: 0.4      // Opacidad del relleno
-}).addTo(map);
-
-// Agregar un popup al polígono
-poligono.bindPopup("Zona del polígono en San Cristóbal").openPopup();
 // Función para inicializar el mapa
 function initMap(id, lat, lon, zoom) {
     var map = L.map(id).setView([lat, lon], zoom);
