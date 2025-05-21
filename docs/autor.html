@@ -3,18 +3,26 @@
   <meta charset="UTF-8">
   <title>Autor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos propios de la página -->
   <link rel="stylesheet" href="estilos.css">
+
+  <!-- Estilos y librería de Leaflet (para el mapa) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <!-- Estilos generales del sitio -->
   <link rel="stylesheet" href="estilo_general.css">
 </head>
+
 <body>
 
-  <!-- Barra de navegación -->
+  <!-- Encabezado con título y menú de navegación -->
   <header>
     <h1>Análisis malla vial de San cristobal</h1>
     <nav>
       <ul>
+        <!-- Menú que enlaza a las otras páginas del proyecto -->
         <li><a href="index.html">Inicio</a></li>
         <li><a href="acerca.html">Acerca de</a></li>
         <li><a href="descripcion.html">Descripción</a></li>
@@ -23,43 +31,52 @@
     </nav>
   </header>
 
-  <!-- Contenido en dos columnas -->
+  <!-- Contenido principal dividido en dos columnas -->
   <main>
     <div class="fila">
+      <!-- Columna con la imagen de la autora -->
       <div class="imagen">
         <img src="img/laura.jpeg" alt="Foto de la autora" width="200">
       </div>
+
+      <!-- Columna con el texto biográfico -->
       <div class="texto">
         <p>
-        Mi nombre es <strong>Laura Ramírez</strong>, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> 
-        en la <strong>Universidad Distrital Francisco José de Caldas</strong>. Actualmente curso el <strong>tercer 
-        semestre</strong> de la carrera.
-      </p>
-      <p>
-        Este proyecto nace a partir de una observación cotidiana: el mal estado de las vías en el barrio San Cristóbal. 
-        Aunque no nací ni vivo permanentemente allí, paso temporadas en esta zona, lo que me ha permitido identificar 
-        problemáticas que afectan a sus habitantes. 
-      </p>
-      <p>
-        Elegí este sector porque, aunque mi lugar de nacimiento y el lugar donde vive mi familia es <strong>
+          Mi nombre es <strong>Laura Ramírez</strong>, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> 
+          en la <strong>Universidad Distrital Francisco José de Caldas</strong>. Actualmente curso el <strong>tercer 
+          semestre</strong> de la carrera.
+        </p>
+        <p>
+          Este proyecto nace a partir de una observación cotidiana: el mal estado de las vías en el barrio San Cristóbal. 
+          Aunque no nací ni vivo permanentemente allí, paso temporadas en esta zona, lo que me ha permitido identificar 
+          problemáticas que afectan a sus habitantes. 
+        </p>
+        <p>
+          Elegí este sector porque, aunque mi lugar de nacimiento y el lugar donde vive mi familia es <strong>
           Facatativá</strong>, he estado viviendo temporalmente en San Cristóbal y he podido observar de cerca 
           el deterioro de su malla vial. A través de este trabajo, intento iniciar un análisis básico que pueda 
           servir como punto de partida para futuras soluciones o investigaciones.
-      </p>
+        </p>
       </div>
     </div>
 
-    <!-- Mapa al final -->
+    <!-- Mapa insertado debajo de la información -->
     <div id="map"></div>
   </main>
 
+  <!-- Script para crear el mapa con Leaflet -->
   <script>
-  var map = L.map('map').setView([4.809603032342935, -74.35131030281265], 20);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-  L.marker([4.809603032342935, -74.35131030281265]).addTo(map)
-    .bindPopup("Hospital de nacimiento")
-    .openPopup();
-</script>
+    // Crear el mapa centrado en una ubicación específica (hospital de nacimiento)
+    var map = L.map('map').setView([4.809603032342935, -74.35131030281265], 20);
+
+    // Cargar fondo de mapa desde OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Colocar un marcador con un texto emergente (popup)
+    L.marker([4.809603032342935, -74.35131030281265]).addTo(map)
+      .bindPopup("Hospital de nacimiento")
+      .openPopup(); // Abre el popup automáticamente al cargar
+  </script>
 
 </body>
 </html>
