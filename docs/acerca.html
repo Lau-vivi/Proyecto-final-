@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acerca de</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="stylesheet" href="estilo_general.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <h1>Análisis malla vial de San cristobal</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+        <li><a href="descripcion.html">Descripción</a></li>
+        <li><a href="autor.html">Autor</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido dividido en dos columnas -->
+  <main class="fila">
+    <div class="texto">
+      <h2>Acerca del Proyecto</h2>
+      <p>
+        El proyecto surge de una problemática evidente en el barrio San Cristóbal: el deterioro constante de su malla
+         vial. Los huecos en las calles, muchas veces ignorados o considerados parte del paisaje urbano, representan
+          una dificultad diaria para los habitantes del sector. Ya sea al caminar, montar bicicleta o movilizarse 
+          en vehículo, estos daños en la vía afectan el ritmo de vida y generan molestias que se acumulan con el 
+          tiempo.
+      </p>
+      <p>
+        La intención de este trabajo es visibilizar esa situación a través de herramientas digitales. No se trata 
+        de encontrar una solución inmediata, sino de comenzar a entender cómo está distribuido este problema 
+        dentro del barrio. En este sentido, se espera que la información visual —como el mapa que aparece a 
+        la derecha— ayude a identificar zonas críticas o patrones que puedan analizarse más adelante.
+      </p>
+      <p>
+        Además de su aspecto práctico, este proyecto busca despertar una mirada más crítica sobre el entorno: 
+        mirar con atención lo que muchas veces pasamos por alto. Este primer acercamiento, aunque básico, 
+        permite reflexionar sobre la importancia del mantenimiento urbano y cómo su ausencia afecta la vida 
+        diaria de una comunidad. La imagen del mapa es apenas un punto de partida para futuras investigaciones 
+        y desarrollos más profundos.
+      </p>
+    </div>
+
+    <div class="mapa" id="map"></div>
+  </main>
+
+  <script>
+    var map = L.map('map').setView([4.579, -74.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    var polygon = L.polygon([
+      [4.560731, -74.085905],
+      [4.557706, -74.082506],
+      [4.551747, -74.084843],
+      [4.552231, -74.088515],
+      [4.560731, -74.085905]
+    ]).addTo(map);
+  </script>
+
+</body>
+</html>

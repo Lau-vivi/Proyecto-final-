@@ -1,119 +1,55 @@
-#map { 
-    width: 100%;
-    height: 600px; 
-}
-/* Estilos para la barra de navegación */
-nav {
-    background-color: #6a1b9a; /* Morado */
-    padding: 10px 0;
-    font-family: Arial, sans-serif;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Alinea los elementos en una fila */
-    justify-content: center; /* Centra los enlaces */
-}
-
-nav ul li {
-    margin: 0 20px; /* Espaciado entre los enlaces */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white; /* Color del texto de los enlaces */
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px; /* Espaciado dentro de los enlaces */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Efecto suave de cambio de color */
-}
-
-nav ul li a:hover {
-    background-color: #9c4dcc; /* Morado más claro para el hover */
-    color: #fff; /* Color blanco cuando pasa el mouse */
-}
-/* Estilo general del cuerpo */
+/* GENERAL */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom right, #fdfbff, #ece4f8);
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    background-color: #6a1b9a;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* MAPA GENERAL */
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-    background-color: #6a1b9a;
-    padding: 10px;
-    text-align: center;
+/* CONTENEDOR HORIZONTAL */
+.fila {
+  display: flex;
+  flex-wrap: wrap; /* Para que sea responsivo */
+  gap: 20px;
+  padding: 20px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-main {
-    padding: 20px;
-}
-
-/* Estilos para la sección principal */
-.contenido {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* Estilo para el texto */
+/* TEXTO IZQUIERDA o DERECHA */
 .texto {
-    flex: 1;
-    max-width: 45%;
-    padding: 10px;
+  flex: 2;
+  background-color: #ffffffc7;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Estilo para las imágenes */
-.foto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* MAPA EN COLUMNA */
+.mapa {
+  flex: 1;
+  height: 400px;
 }
 
-/* Estilo para la biografía */
-.biografia {
-    flex: 1;
-    max-width: 45%;
-    padding: 10px;
+/* IMAGEN EN COLUMNA */
+.imagen {
+  flex: 1;
+  padding: 1rem;
+  background-color: #ffffffc7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Estilo para los mapas */
-.map {
-    width: 100%;
-    height: 300px;
-}
-
-/* Pie de página */
-footer {
-    background-color: #6a1b9a;
-    color: white;
-    padding: 10px;
-    text-align: center;
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
