@@ -22,3 +22,23 @@ var poligono = L.polygon(puntosPoligono, {
 
 // Agregar un popup al polígono
 poligono.bindPopup("Zona del polígono en San Cristóbal").openPopup();
+// Función para inicializar el mapa
+function initMap(id, lat, lon, zoom) {
+    var map = L.map(id).setView([lat, lon], zoom);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    return map;
+}
+
+// Mapa de la página de inicio (San Cristóbal)
+if (document.getElementById('map')) {
+    initMap('map', 4.555742937351999, -74.08400870501436);  // San Cristóbal
+}
+
+// Mapa del lugar de nacimiento (Bogotá)
+if (document.getElementById('footer-map')) {
+    initMap('footer-map', 4.6097, -74.0817, 12);  // Bogotá, Colombia
+}
