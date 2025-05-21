@@ -2,3 +2,118 @@
     width: 100%;
     height: 600px; 
 }
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #6a1b9a; /* Morado */
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los elementos en una fila */
+    justify-content: center; /* Centra los enlaces */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaciado entre los enlaces */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Color del texto de los enlaces */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px; /* Espaciado dentro de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto suave de cambio de color */
+}
+
+nav ul li a:hover {
+    background-color: #9c4dcc; /* Morado más claro para el hover */
+    color: #fff; /* Color blanco cuando pasa el mouse */
+}
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #6a1b9a;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos para la sección principal */
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Estilo para el texto */
+.texto {
+    flex: 1;
+    max-width: 45%;
+    padding: 10px;
+}
+
+/* Estilo para las imágenes */
+.foto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para la biografía */
+.biografia {
+    flex: 1;
+    max-width: 45%;
+    padding: 10px;
+}
+
+/* Estilo para los mapas */
+.map {
+    width: 100%;
+    height: 300px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
