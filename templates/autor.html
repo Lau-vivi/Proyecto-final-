@@ -58,10 +58,7 @@
   <div id="map" style="height: 400px; margin: 30px;"></div>
   <script>
     var map = L.map('map').setView([4.809603032342935, -74.35131030281265], 300);
-
-    // Carga los tiles del mapa de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
     // Coloca un marcador en la posición de las coordenadas indicadas
     L.marker([4.809603032342935, -74.35131030281265]).addTo(map)
       .bindPopup("Hospital de nacimiento") // Añade un texto emergente al hacer clic
