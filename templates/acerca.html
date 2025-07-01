@@ -1,70 +1,82 @@
-
-<html lang="es">
+<html lang="es"> 
 <head>
-  <meta charset="UTF-8">
-  <title>Acerca de</title>
+  <meta charset="UTF-8"> 
+  <title>Acerca de</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Hojas de estilo -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="../static/css/estilo_general.css">
- <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <!-- Bootstrap y Leaflet JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-
+  
 </head>
 
 <body>
+  <!-- ========== ENCABEZADO DE LA PÁGINA ========== -->
   <header class="bg-light py-3 border-bottom">
     <div class="container d-flex align-items-center justify-content-between">
       <div>
         <img src="../static/imagen/logo.jfif" alt="Logo" height="80">
+        <!-- Muestra una imagen con el logo de la página, con altura fija de 80px -->
       </div>
+
       <div>
-        <h1 class="titulo-morado text-center">Vía Firme – Plataforma de Reporte y Visualización de Huecos</h1>
+        <h1 class="titulo-morado text-center">
+          Vía Firme – Plataforma de Reporte y Visualización de Huecos
+        </h1>
       </div>
     </div>
+
+    <!-- ========== MENÚ DE NAVEGACIÓN ========== -->
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="descripcion.html">Descripción</a></li>
-        <li><a href="autor.html">Autor</a></li>
-        <li><a href="addPoint.html">Registrar Sitio</a></li>
+        
+        <li><a href="index.html">Inicio</a></li> 
+        <li><a href="acerca.html">Acerca de</a></li> 
+        <li><a href="descripcion.html">Descripción</a></li> 
+        <li><a href="autor.html">Autor</a></li> 
+        <li><a href="addPoint.html">Registrar Sitio</a></li> 
       </ul>
     </nav>
   </header>
 
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
   <main class="fila">
     <div class="texto">
-      <h2>Acerca del Proyecto</h2>
-      <p>
-        El proyecto nace a partir de un problema que muchas personas vivimos todos los días: 
-        el mal estado de las calles en el barrio <a href="https://es.wikipedia.org/wiki/San_Crist%C3%B3bal_(Bogot%C3%A1)">San Cristóbal</a>. 
-        Es muy común encontrar huecos, grietas o desniveles que hacen difícil caminar, andar en bicicleta o manejar.
-      </p>
-      <p>
-        Este trabajo es un primer paso para aprender cómo usar páginas web y herramientas digitales que en el 
-        futuro pueden servir para identificar y mostrar los lugares más afectados del barrio.
-      </p>
+    Este proyecto surge como una iniciativa para abordar una problemática común y recurrente en el barrio 
+    <a href="https://es.wikipedia.org/wiki/San_Crist%C3%B3bal_(Bogot%C3%A1)">San Cristóbal</a>: el deterioro 
+    de sus vías públicas debido a la presencia de huecos y daños en la malla vial.
+    El impacto de estos huecos va más allá de un simple inconveniente estético; afectan la seguridad de 
+    peatones, ciclistas y conductores, además de generar dificultades para el tránsito diario y posibles 
+    daños en vehículos.
+  </p>
+  <p>
+    La propuesta consiste en una plataforma digital que permite registrar de manera sistemática los huecos 
+    encontrados en diferentes puntos del barrio, a través de un formulario en línea que recoge datos clave 
+    como la ubicación, tamaño y características del daño. Esta información es almacenada en una base de datos
+    que permite posteriormente visualizar y analizar la distribución espacial de los huecos.
+  </p>
+  <p>
+    El proyecto representa un esfuerzo por utilizar herramientas tecnológicas para evidenciar y documentar 
+    una problemática local. Además, se busca fomentar un espacio donde la comunidad pueda aportar información 
+    valiosa que facilite la comprensión y posible solución de esta situación.
+  </p>
     </div>
 
     <div class="mapa" id="map"></div>
-  </main>
 
+  </main>
+  <!-- ========== SCRIPT PARA EL MAPA INTERACTIVO ========== -->
   <script>
     var map = L.map('map').setView([4.556431278746274, -74.08634196774828], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    var polygon = L.polygon([
-      [4.560731, -74.085905],
-      [4.557706, -74.082506],
-      [4.551747, -74.084843],
-      [4.552231, -74.088515],
-      [4.560731, -74.085905]
-    ]).addTo(map);
+    // Se dibuja un polígono (zona encerrada) sobre el mapa con coordenadas específicas
+    var polygon = L.polygon(
+      [4.560731, -74.085905], 
+      [4.557706, -74.082506], 
+      [4.551747, -74.084843], 
+      [4.552231, -74.088515], 
+      [4.560731, -74.085905])
   </script>
 </body>
 </html>

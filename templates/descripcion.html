@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <head>
-  <meta charset="UTF-8">
-  <title>Descripción</title>
+  <meta charset="UTF-8"> 
+  <title>Descripción</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Estilos personalizados -->
-  
   <link rel="stylesheet" href="../static/css/estilo_general.css">
-
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -26,53 +16,58 @@
       <div>
         <img src="../static/imagen/logo.jfif" alt="Logo" height="80">
       </div>
+
       <div>
-        <h1 class="titulo-morado text-center">Vía Firme – Plataforma de Reporte y Visualización de Huecos</h1>
+        <h1 class="titulo-morado text-center">
+          Vía Firme – Plataforma de Reporte y Visualización de Huecos
+        </h1>
       </div>
     </div>
+    <!-- ===== Menú de navegación ===== -->
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="descripcion.html">Descripción</a></li>
+        <li><a href="descripcion.html">Descripción</a></li> 
         <li><a href="autor.html">Autor</a></li>
         <li><a href="addPoint.html">Registrar Sitio</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contenido principal -->
   <main class="fila">
     <div class="texto">
-      <h2>Descripción de las Tecnologías Utilizadas</h2>
-      <p>
-        Este proyecto web fue creado utilizando HTML, hojas de estilo CSS y un archivo de tipo GeoJSON en 
-        formato `.js` para representar un polígono interactivo en el mapa. Cada una de estas herramientas 
-        cumple una función específica en la estructura y funcionalidad del sitio.
-      </p>
-
-      <h3>Páginas HTML</h3>
-      <p>
-        Se diseñaron cuatro páginas HTML principales: <strong>index.html</strong> como portada del sitio, 
-        <strong>acerca.html</strong> para presentar el objetivo del proyecto, <strong>descripcion.html</strong> 
-        para explicar las tecnologías utilizadas, y <strong>autor.html</strong> con información sobre la persona 
-        que desarrolló el proyecto. Estas páginas están interconectadas mediante una barra de navegación común.
-      </p>
-
-      <h3>Hojas de Estilo CSS</h3>
-      <p>
-        El diseño del sitio está controlado por dos archivos CSS: <strong>estilo_general.css</strong>, que define 
-        la apariencia general como colores suaves, tipografía, distribución de secciones y adaptabilidad del contenido; 
-        y <strong>estilos1.css</strong>, que se encarga de organizar visualmente elementos como los mapas y el 
-        contenido en columnas, por ejemplo, texto a la izquierda y el mapa a la derecha.
-      </p>
-
-      <h3>Carpeta de Imágenes</h3>
-      <p>
-        El proyecto incluye una carpeta de imágenes, donde se almacenan elementos visuales como la fotografía de la 
-        autora en formato JPEG. Estas imágenes se utilizan en las distintas secciones del sitio para complementar 
-        el contenido.
-      </p>
+       <p>
+    Para el desarrollo de esta plataforma se emplearon diversas tecnologías y herramientas que permiten 
+    crear un sitio web funcional, interactivo y fácil de usar, facilitando el registro y visualización de 
+    los huecos en el barrio San Cristóbal.
+  </p>
+  <p><strong>HTML5:</strong> Fue utilizado para estructurar el contenido de la página web, organizando los 
+    diferentes elementos como textos, imágenes y formularios de manera semántica y accesible.</p>
+  <p><strong>CSS3:</strong> Se encargó de dar estilo y formato a la página, definiendo colores, fuentes, 
+    márgenes y disposiciones que permiten una presentación visual coherente y atractiva. También se aplicaron
+    técnicas de diseño responsivo para asegurar que el sitio se adapte correctamente a distintos tamaños de 
+    pantalla.</p>
+  <p><strong>JavaScript:</strong> Para agregar interactividad y mejorar la experiencia del usuario, se 
+    utilizó JavaScript, que permitió validar los datos ingresados en los formularios y manejar eventos 
+    dinámicos dentro del sitio.</p>
+  <p><strong>Leaflet.js:</strong> Para la representación cartográfica y la visualización de los puntos 
+    reportados, se integró Leaflet.js, una librería especializada en mapas interactivos que facilita la 
+    ubicación geográfica de los huecos sobre un mapa del barrio.</p>
+  <p><strong>Python y Flask:</strong> En el backend, se usó el lenguaje Python junto con el framework Flask, 
+    que permite manejar las solicitudes del usuario, procesar la información enviada desde el formulario y 
+    conectarse con la base de datos para almacenar los registros.</p>
+  <p><strong>SQLite:</strong> La base de datos utilizada fue SQLite, un sistema de gestión de bases de datos 
+    ligero que guarda los datos de forma estructurada y permite su posterior consulta y análisis.</p>
+  <p><strong>Imágenes:</strong> El proyecto incluye una carpeta dedicada a imágenes, que contiene recursos 
+    gráficos como íconos, ilustraciones o capturas que ayudan a mejorar la presentación visual de la página. 
+    Estas imágenes también se utilizan como apoyo visual en el formulario o para representar elementos en el
+    mapa.</p>
+  <p><strong>Visual Studio Code:</strong> El proyecto fue desarrollado utilizando Visual Studio Code como 
+    editor de código, que ofrece herramientas para facilitar la escritura y organización del código fuente.</p>
+  <p><strong>Git y GitHub:</strong> Para el control de versiones y gestión del proyecto, se empleó Git junto 
+    con la plataforma GitHub, lo que permitió mantener un historial ordenado de cambios y facilitar la 
+    colaboración y respaldo del código.</p>
     </div>
   </main>
 
