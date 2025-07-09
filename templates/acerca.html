@@ -67,16 +67,25 @@
 
   </main>
   <!-- ========== SCRIPT PARA EL MAPA INTERACTIVO ========== -->
-  <script>
-    var map = L.map('map').setView([4.556431278746274, -74.08634196774828], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    // Se dibuja un polígono (zona encerrada) sobre el mapa con coordenadas específicas
-    var polygon = L.polygon(
-      [4.560731, -74.085905], 
-      [4.557706, -74.082506], 
-      [4.551747, -74.084843], 
-      [4.552231, -74.088515], 
-      [4.560731, -74.085905])
+<script>
+  var map = L.map('map').setView([4.556431278746274, -74.08634196774828], 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  // Dibuja un polígono delimitando una zona del barrio San Cristóbal
+  var polygon = L.polygon([
+    [4.560731, -74.085905], 
+    [4.557706, -74.082506], 
+    [4.551747, -74.084843], 
+    [4.552231, -74.088515], 
+    [4.560731, -74.085905]
+  ], {
+    color: 'purple',        // Color del borde
+    fillColor: '#d1b3ff',   // Color de relleno
+    fillOpacity: 0.5        // Transparencia
+  }).addTo(map);
+  // Muestra mensaje al hacer clic
+  polygon.bindPopup("Zona de estudio.");
   </script>
 </body>
 </html>
